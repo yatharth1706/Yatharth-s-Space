@@ -1,6 +1,7 @@
 import React from "react";
+import Link from "next/link";
 
-function PathComponent({ sequence, heading, summary }) {
+function PathComponent({ sequence, heading, summary, link }) {
   return (
     <div>
       <div
@@ -11,9 +12,11 @@ function PathComponent({ sequence, heading, summary }) {
         <span className="text-xl font-normal">{sequence}</span>
       </div>
       <div className="text-center mt-4">
-        <h2 className="cursor-pointer font-black bg-gradient-to-r from-cyan-600 to-blue-500 text-transparent bg-clip-text text-xl">
-          {heading}
-        </h2>
+        <Link href={link}>
+          <h2 className="cursor-pointer font-black bg-gradient-to-r from-cyan-600 to-blue-500 text-transparent bg-clip-text text-xl">
+            {heading}
+          </h2>
+        </Link>
         <span className="text-sm">{summary}</span>
       </div>
     </div>

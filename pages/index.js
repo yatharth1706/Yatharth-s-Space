@@ -37,18 +37,21 @@ export default function Home() {
             sequence={1}
             heading="DSA A to Z"
             summary="Curated list of DSA Questions that are frequently asked in interviews"
+            link="/dsa"
           />
 
           <PathComponent
             sequence={2}
             heading="Frontend Interview Pool"
             summary="Frontend Interview Pool. Contains all frontend technology related interview questions"
+            link="/frontend-interviews"
           />
 
           <PathComponent
             sequence={3}
             heading="System Design"
             summary="Curated list of some frequently asked System Design questions by various product based companies"
+            link="/system-design"
           />
         </div>
       </main>
