@@ -1,4 +1,5 @@
 import { createClient } from "next-sanity";
+import Details from "../../components/Details";
 
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -10,8 +11,15 @@ const client = createClient({
 export default function DSA({ dsaConcepts }) {
   return (
     <div className="p-10 ">
+      <h1 className="text-2xl font-bold ">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
+          Yatharth's
+        </span>{" "}
+        Space
+      </h1>
+      <h2 className="mt-2 mb-3">DSA A to Z</h2>
       {dsaConcepts.map((item) => (
-        <details>{item?.name}</details>
+        <Details rowData={item} />
       ))}
     </div>
   );
