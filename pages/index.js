@@ -1,4 +1,5 @@
 import Head from "next/head";
+import PathComponent from "../components/PathComponent";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -32,34 +33,43 @@ export default function Home() {
 
         <div className="text-center">
           <h5>Explore paths</h5>
+          <PathComponent
+            sequence={1}
+            heading="DSA A to Z"
+            summary="Curated list of DSA Questions that are frequently asked in interviews"
+          />
 
-          <div
-            className="mx-auto mt-4 h-40 bg-gradient-to-b from-gray-900 to-blue-500"
-            style={{ width: "1px" }}
-          ></div>
-          <div className="mx-auto text-center justify-center flex flex-col rounded-full w-14 h-14 bg-gradient-to-r from-cyan-600 to-blue-700">
-            <span className="text-xl font-normal">1</span>
-          </div>
-          <div className="text-center mt-4">
-            <h2 className="cursor-pointer font-black bg-gradient-to-r from-cyan-600 to-blue-500 text-transparent bg-clip-text text-xl">
-              DSA A to Z
-            </h2>
-            <span className="text-sm">
-              Curated list of DSA Questions that are frequently asked in interviews
-            </span>
-          </div>
+          <PathComponent
+            sequence={2}
+            heading="Frontend Interview Pool"
+            summary="Frontend Interview Pool. Contains all frontend technology related interview questions"
+          />
+
+          <PathComponent
+            sequence={3}
+            heading="System Design"
+            summary="Curated list of some frequently asked System Design questions by various product based companies"
+          />
         </div>
       </main>
-      {/* 
+
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Built by ❤️ and NextJS
-        </a>
-      </footer> */}
+        <small>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Built by ❤️ and NextJS
+          </a>
+        </small>
+        <small className="mt-2">
+          Author:{" "}
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
+            Yatharth Verma
+          </span>
+        </small>
+      </footer>
     </div>
   );
 }
