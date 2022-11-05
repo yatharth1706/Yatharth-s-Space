@@ -7,8 +7,8 @@ export default function Home() {
     <div className={styles.container}>
       <main className={styles.main}>
         <div className="flex flex-col justify-center items-center h-96">
-          <h1 className="text-5xl font-black">Welcome to</h1>
-          <h1 className="text-5xl font-black">
+          <h1 className="text-3xl md:text-5xl font-black">Welcome to</h1>
+          <h1 className="text-3xl md:text-5xl font-black">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
               Yatharth's
             </span>{" "}

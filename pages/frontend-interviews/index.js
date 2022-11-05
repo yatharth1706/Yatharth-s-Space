@@ -10,7 +10,7 @@ const client = createClient({
 
 export default function FrontendInterviewPool({ frontendInterviewPool }) {
   return (
-    <div className="p-10 ">
+    <div className="p-4 md:p-10 ">
       <h1 className="text-2xl font-black cursor-pointer">
         <Link href="/">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
