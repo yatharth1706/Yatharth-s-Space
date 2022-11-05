@@ -16,7 +16,7 @@ function Details({ rowData }) {
             <td className="p-3">{index + 1}</td>
             <td className="p-3">{item?.title}</td>
             <td className="p-3">
-              <a href={item?.leetcodeLink} target="_blank">
+              <a href={item?.leetcodeLink} target="_blank" className="text-cyan-500">
                 Link
               </a>
             </td>
