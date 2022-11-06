@@ -26,9 +26,13 @@ export default function TechStack({ techStackQuestions }) {
       <h1 className="font-bold mt-3">{router?.query?.techStack} Questions</h1>
 
       <div className="rounded-lg p-4 mt-4 text-white-800 bg-gradient-to-r from-gray-700 to-gray-900">
-        {techStackQuestions.map((item) => (
-          <QuestionsAndAns questions={item?.questions} />
-        ))}
+        {techStackQuestions.length === 1 && (
+          <QuestionsAndAns questions={techStackQuestions[0]?.questions} />
+        )}
+
+        {techStackQuestions.length === 1 && techStackQuestions[0]?.questions === undefined && (
+          <span>No questions added yet...</span>
+        )}
       </div>
     </div>
   );
@@ -41,7 +45,6 @@ export async function getStaticProps(context) {
   let techStackQuestions = await client.fetch(
     `*[_type == "frontendInterviewPool" && techStack == "${techStack}"]`
   );
-  console.log(techStackQuestions);
 
   return {
     props: {
