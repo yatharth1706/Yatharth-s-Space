@@ -23,7 +23,7 @@ export default function TechStack({ techStackQuestions }) {
           </span>
         </Link>
       </h1>
-      <h1 className="font-bold mt-3">{router?.query?.techStack} Questions</h1>
+      <h3 className="font-bold mt-3">{router?.query?.techStack} Questions</h3>
 
       <div className="rounded-lg p-4 mt-4 text-white-800 bg-gradient-to-r from-gray-700 to-gray-900">
         {techStackQuestions.length === 1 && (

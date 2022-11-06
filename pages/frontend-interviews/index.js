@@ -18,7 +18,7 @@ export default function FrontendInterviewPool({ frontendInterviewPool }) {
           </span>
         </Link>
       </h1>
-      <h2 className="mt-2 mb-3 font-bold">Frontend Interview Pool</h2>
+      <h3 className="mt-2 mb-3 font-bold">Frontend Interview Pool</h3>
       <div className="flex flex-col space-y-6 w-full md:flex-row flex-wrap md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
         {frontendInterviewPool.map((item) => (
           <Link href={`/frontend-interviews/${encodeURIComponent(item?.techStack)}`}>

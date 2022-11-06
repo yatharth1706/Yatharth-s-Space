@@ -19,7 +19,7 @@ export default function DSA({ dsaConcepts }) {
           </span>
         </Link>
       </h1>
-      <h2 className="mt-2 mb-3 font-bold">DSA A to Z</h2>
+      <h3 className="mt-2 mb-3 font-bold">DSA A to Z</h3>
       {dsaConcepts.map((item) => (
         <Details rowData={item} />
       ))}
